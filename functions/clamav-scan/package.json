@@ -1,0 +1,17 @@
+{
+  "name": "clamav-scan",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "rimraf dist && esbuild index.ts --format=esm --outfile=dist/index.mjs"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.130",
+    "esbuild": "^0.19.8",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.465.0"
+  }
+}
