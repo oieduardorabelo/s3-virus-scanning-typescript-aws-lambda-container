@@ -15,9 +15,8 @@ export class ClamavNodejs20Stack extends cdk.Stack {
         AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
         NODE_OPTIONS: "--enable-source-maps",
       },
-      ephemeralStorageSize: cdk.Size.gibibytes(1),
       memorySize: 2048,
-      timeout: cdk.Duration.minutes(5),
+      timeout: cdk.Duration.minutes(3),
     });
 
     const s3Bucket = new cdk.aws_s3.Bucket(this, "s3Bucket", {});
